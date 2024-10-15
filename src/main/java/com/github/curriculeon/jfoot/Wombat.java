@@ -13,6 +13,7 @@ import static com.github.curriculeon.jfoot.Direction.*;
  */
 public class Wombat extends Herbivore {
  public boolean isEven =true;
+ public Integer count = 0;
     public Wombat() {
         setImage("wombat.png");
     }
@@ -35,10 +36,14 @@ public class Wombat extends Herbivore {
            this.move();
            this.turnLeft();
             this.isEven = false;
+            this.count++;
         }
 
 
     }
+
+
+
 
     public void turnLeft() {
         if (this.getDirection() == EAST) {
